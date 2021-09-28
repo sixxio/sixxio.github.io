@@ -42,7 +42,7 @@
         }
 
         .container div:first-child {
-            z-index: 3;
+            z-index: 1;
         }
 
         .container div:nth-child(2) {
@@ -60,7 +60,7 @@
         }
 
         .container div:last-child {
-            z-index: 1;
+            z-index: 3;
             opacity: 0;
             transform: scale(0.4);
         }
@@ -90,6 +90,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container" onmousedown="myScript" id="contain">
         <div class="frog1-cont">
@@ -105,15 +106,6 @@
     <script>
         document.getElementById('contain').onmousedown = function(){myScript()};
         document.getElementById('contain').onmouseup = function(){myScript2()};
-
-        let yaaa = document.getElementById('aud');
-
-        function myScript() {
-            yaaa.play();
-        }
-        function myScript2() {
-            yaaa.pause();
-        }
     </script>
 </body>
 </html>
