@@ -25,7 +25,7 @@
         }
 
         .container:active {
-            transform: rotate(1080deg);
+            transform: ;
         }
 
         .container div {
@@ -50,7 +50,7 @@
         }
 
         .container div:nth-child(2)::before {
-            content: "Ты кто?";
+            content: "Как тебе такое?";
             display: block;
             position: absolute;
             top: 50px;
@@ -66,12 +66,12 @@
         }
 
         .container div:last-child::before {
-            content: "Принцесса";
+            content: "Это еще не тесла :)";
             display: block;
             position: absolute;
             top: -20px;
             left: 80px;
-            color: green;
+            color: grey;
             font-size: 32px;
         }
 
@@ -85,12 +85,8 @@
         }
 
         .container:focus div:last-child{
-            transform: scale(1) translate(-450px, 0) rotate(180deg);
+            transform: scale(1) translate(-450px, 0);
             opacity: 1;
-        }
-        audio{
-            visibility: hidden;
-            position: absolute;
         }
     </style>
 </head>
