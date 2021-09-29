@@ -8,8 +8,9 @@ body{
 .container{
     width: 250px;
     height: 250px;
+    border-radius: 15px;
     position: relative;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
     overflow: hidden;/*Всё, что за пределами container не будет видно*/
 }
 
