@@ -1,104 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .container {
-            width: 300px;
-            height: 300px;
-            background-color: rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
-            overflow: hidden;
-            transition: 5s ease;
-        }
-
-        .container:active {
-            transition: .3s ease;
-        }
-
-        .container div {
-            transition: .3s ease;
-            position: relative;
-        }
-        
-        .container:hover div:nth-child(2) {
-            transition: .7s ease;
-        }
-
-        .container:hover div:last-child {
-            transition: .5s ease;
-        }
-
-
-        .container div:nth-child(2)::before {
-            content: "Как тебе такое?";
-            display: block;
-            position: absolute;
-            top: 20px;
-            left: 50px;
-            color: grey;
-            font-size: 24px;
-        }
-
-        .container div:last-child {
-            z-index: 3;
-            opacity: 0;
-            transform: scale(0.4);
-        }
-
-        .container div:last-child::before {
-            content: "Это еще не тесла :)";
-            display: block;
-            position: absolute;
-            top: -20px;
-            left: 80px;
-            color: grey;
-            font-size: 24px;
-        }
-
-        .container:active div:last-child {
-            opacity: 1;
-            transform: scale(1) translate(450px, -450px);
-        }
-
-        .container:active div:nth-child(2) {
-            opacity: 0;
-        }
-
-        .container:focus div:last-child{
-            transform: scale(1) translate(-450px, 0);
-            opacity: 1;
-        }
-    </style>
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container" onmousedown="myScript" id="contain">
-        <div class="frog1-cont">
-            <img src="ilon1.png" alt="zdarova">
+    <div class="container">
+        <div class="ilon-cont-1">
+            <img src="ilon1.png" alt="ilon">
         </div>
-        <div class="frog3-cont">
-            <img src="ilon2.png" alt="zdarova">
+        <div class="ilon-cont-2">
+            <img src="ilon2.png" alt="ilon">
         </div>
-        <div class="frog2-cont">
-            <img src="ilon3.png" alt="zdarova">
+        <div class="ilon-cont-3">
+            <img src="ilon3.png" alt="ilon">
         </div>
     </div>
-    <script>
-        document.getElementById('contain').onmousedown = function(){myScript()};
-        document.getElementById('contain').onmouseup = function(){myScript2()};
-    </script>
 </body>
 </html>
