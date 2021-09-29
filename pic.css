@@ -19,7 +19,7 @@ body{
   border-color: #4c90af;
   border-width: 2px;
   position: absolute;
-  top:40px;
+  top:20px;
   left:55px;
 }
 .rleg {
@@ -28,7 +28,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(15deg);
-  top:145px;
+  top:125px;
   left:115px;
 }
 .r1finger {
@@ -37,7 +37,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(5deg);
-  top:188px;
+  top:168px;
   left:109px;
 }
 .r2finger {
@@ -46,7 +46,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(40deg);
-  top:185px;
+  top:165px;
   left:104px;
 }
 .r3finger {
@@ -55,7 +55,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(-40deg);
-  top:185px;
+  top:165px;
   left:115px;
 }
 .lleg {
@@ -64,7 +64,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(15deg);
-  top:145px;
+  top:125px;
   left:85px;
 }
 .l1finger {
@@ -73,7 +73,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(5deg);
-  top:188px;
+  top:168px;
   left:78px;
 }
 .l2finger {
@@ -82,7 +82,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(40deg);
-  top:185px;
+  top:165px;
   left:73px;
 }
 .l3finger {
@@ -91,7 +91,7 @@ body{
   background: #056aa7;
   position: absolute;
   transform: rotate(-40deg);
-  top:185px;
+  top:165px;
   left:86px;
 }
 .lwing {
@@ -104,7 +104,7 @@ body{
   border-width: 2px;
   position: absolute;
   transform: rotate(20deg);
-  top:85px;
+  top:65px;
   left:45px;
 }
 .rwing {
@@ -117,7 +117,7 @@ body{
   border-width: 2px;
   position: absolute;
   transform: rotate(-20deg);
-  top:85px;
+  top:65px;
   left:135px;
 }
 .pbody {
@@ -129,7 +129,7 @@ body{
   border-color: #4c90af;
   border-width: 2px;
   position: absolute;
-  top:40px;
+  top:20px;
   left:55px;
 }
 .nose {
@@ -139,7 +139,7 @@ body{
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 16px solid #056aa7;
-  top:90px;
+  top:70px;
   left:95px;
 }
 .leye {
@@ -151,7 +151,7 @@ body{
   border-color: #4c90af;
   border-width: 2.5px;
   position: absolute;
-  top:63px;
+  top:43px;
   left:79px;
 }
 .reye {
@@ -163,7 +163,7 @@ body{
   border-color: #4c90af;
   border-width: 2.5px;
   position: absolute;
-  top:63px;
+  top:43px;
   left:109px;
 }
 .lpupil {
@@ -175,7 +175,7 @@ body{
   border-color: #4c90af;
   border-width: 2px;
   position: absolute;
-  top:66px;
+  top:46px;
   left:81px;
 }
 .rpupil {
@@ -187,7 +187,7 @@ body{
   border-color: #4c90af;
   border-width: 2px;
   position: absolute;
-  top:66px;
+  top:46px;
   left:110px;
 }
 .lhair {
@@ -196,7 +196,7 @@ body{
   border-bottom: 20px solid #4c90af;
   border-left: 10px solid transparent;
   position: absolute;
-  top:28px;
+  top:8px;
   left:87px;
 }
 .mhair {
@@ -205,7 +205,7 @@ body{
   border-bottom: 20px solid #4c90af;
   border-left: 13px solid transparent;
   position: absolute;
-  top:25px;
+  top:5px;
   left:95px;
 }
 .rhair {
@@ -214,6 +214,6 @@ body{
   border-bottom: 20px solid #4c90af;
   border-left: 10px solid transparent;
   position: absolute;
-  top:28px;
+  top:8px;
   left:106px;
 }
