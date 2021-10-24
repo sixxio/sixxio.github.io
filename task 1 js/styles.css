@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "SoyuzGroteskBold";
+    src: url("../fonts/Soyuz Grotesk Bold.woff") format("woff");
+    font-weight: bold;
+}
+
+body {
+    font-family: "SoyuzGroteskBold", sans-serif;
+    letter-spacing: 2px;
+    font-size: 90px;
+    margin: 0;
+}
+
+.work-container{
+    height: 75vh;
+    margin: 0;
+    padding-bottom: 200px;
+    position: relative;
+}
+
+.work-container:nth-child(2n+1){
+    background-color: rgba(0, 0, 0, 0.054);
+}
+
+.work-container img{
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+}
+
+.work-container span {
+    font-size: 12vw;
+    top: 65%;
+    right: 8%;
+    position: absolute;
+}
+
+footer{
+    background-color: black;
+    height: 15vh;
+    display: flex;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+.logocirc{
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  border: 5px solid white;
+  position: absolute;
+}
+
+.minicirc{
+  width: 25px; 
+  height: 25px;
+  border: 5px solid white;  
+  border-right-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sales-container{
+    font-size: 50px; 
+    width: 60vw; 
+    height: 40vh;
+}
+
+.sales-img{
+    width: 200px;
+    height: 150px;
+    position: relative;
+}
