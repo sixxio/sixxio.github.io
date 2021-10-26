@@ -7,7 +7,7 @@
 body {
     font-family: "SoyuzGroteskBold", sans-serif;
     letter-spacing: 2px;
-    font-size: 90px;
+    font-size: 6vw;
     margin: 0;
 }
 
@@ -20,15 +20,15 @@ a:hover{
 }
 
 header{
-    height: 100vh;
-    font-size: 160px;
+    height: 110vh;
+    font-size: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .about-me{
-    height: 100vh;
+    height: 110vh;
     margin: 0;
     padding: 0 9%;
     display: flex;
@@ -39,7 +39,7 @@ header{
 }
 
 .contacts{
-    height: 100vh;
+    height: 110vh;
     margin: 0;
     padding: 0 9%;
     display: flex;
@@ -50,7 +50,7 @@ header{
 }
 
 .nav{
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +70,7 @@ header{
 }
 
 .work-container:nth-child(2n+1){
-    background-color: rgba(0, 0, 0, 0.054);
+    background-color: #f0f0f0;
 }
 
 .work-container img{
@@ -86,3 +86,351 @@ header{
     right: 8%;
     position: absolute;
 }
+
+.myworks{
+    height: 20vh;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+.mytasks{
+    height: 20vh;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+footer{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+.logocirc{
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  border: 5px solid white;
+  position: absolute;
+}
+
+.minicirc{
+  width: 25px; 
+  height: 25px;
+  border: 5px solid white;  
+  border-right-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sales-container{
+    font-size: 50px; 
+    width: 60vw; 
+    height: 40vh;
+}
+
+.sales-img{
+    width: 200px;
+    height: 150px;
+    position: relative;
+}
+
+.container{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgba(0,0,0,0.2);
+    overflow: hidden;
+    display:flex;
+    font-size: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Каждой картинке даем  абсолютное позиционирование (в одном месте собираем их) и плавный переход*/
+.container div{
+    position: absolute;
+    transition: 1s ease;
+}
+
+/*2 и 3 картинки изначально скрываем*/
+.container .ilon-cont-2, .container .ilon-cont-3{
+    opacity: 0;
+}
+
+/*при наведении первую картинку скрываем*/
+.container:hover .ilon-cont-1 {
+    opacity: 0;
+}
+
+/*при наведении вторую картинку проявляем*/
+.container:hover .ilon-cont-2 {
+    opacity: 1;
+}
+
+/*при нажатии вторую картинку скрываем*/
+.container:active .ilon-cont-2 {
+    opacity: 0;
+}
+/*при нажатии третью картинку проявляем и перемещаем*/
+.container:active .ilon-cont-3 {
+    opacity: 1;
+    transform: translate(100px, -100px);
+    filter: sepia(0.4);
+}
+/*псевдоэлементы с надписями*/
+.container::before{
+    content: "Это еще не тесла :)";
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    opacity: 0;
+}
+
+.container::after{
+    content: "Как тебе такое?";
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    opacity: 0;
+}
+/*при клике остается это еще не тесла :)*/
+.container:active::before{
+    opacity: 1;
+}
+/*при наведении остается Как тебе такое?*/
+.container:hover::after{
+    opacity: 1;
+}
+/*при клике скрываем Как тебе такое?*/
+.container:active::after{
+    opacity: 0;
+}
+
+.bg {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+  }
+  .pbody {
+    width: 90px;
+    height: 125px;
+    background: radial-gradient(#ffffff, #58c0d5);
+    border-radius: 50px/70px;
+    border-style: solid;
+    border-color: #4c90af;
+    border-width: 2px;
+    position: absolute;
+    top:20px;
+    left:55px;
+  }
+  .rleg {
+    width: 3px;
+    height: 45px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(15deg);
+    top:125px;
+    left:115px;
+  }
+  .r1finger {
+    width: 3px;
+    height: 15px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(5deg);
+    top:168px;
+    left:109px;
+  }
+  .r2finger {
+    width: 3px;
+    height: 20px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(40deg);
+    top:165px;
+    left:104px;
+  }
+  .r3finger {
+    width: 3px;
+    height: 20px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(-40deg);
+    top:165px;
+    left:115px;
+  }
+  .lleg {
+    width: 3px;
+    height: 45px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(15deg);
+    top:125px;
+    left:85px;
+  }
+  .l1finger {
+    width: 3px;
+    height: 15px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(5deg);
+    top:168px;
+    left:78px;
+  }
+  .l2finger {
+    width: 3px;
+    height: 20px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(40deg);
+    top:165px;
+    left:73px;
+  }
+  .l3finger {
+    width: 3px;
+    height: 20px;
+    background: #056aa7;
+    position: absolute;
+    transform: rotate(-40deg);
+    top:165px;
+    left:86px;
+  }
+  .lwing {
+   width: 20px;
+    height: 60px;
+    background: radial-gradient(circle at 70% 70%, #ffffff, #2ab5d1);
+    border-radius: 20px/40px;
+    border-style: solid;
+    border-color: #97c2e3;
+    border-width: 2px;
+    position: absolute;
+    transform: rotate(20deg);
+    top:65px;
+    left:45px;
+  }
+  .rwing {
+    width: 20px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 70%, #ffffff, #2ab5d1);
+    border-radius: 20px/40px;
+    border-style: solid;
+    border-color: #97c2e3;
+    border-width: 2px;
+    position: absolute;
+    transform: rotate(-20deg);
+    top:65px;
+    left:135px;
+  }
+  .pbody {
+    width: 90px;
+    height: 125px;
+    background: radial-gradient(at 50px 90px, #ffffff, #58c0d5);
+    border-radius: 50px/70px;
+    border-style: solid;
+    border-color: #4c90af;
+    border-width: 2px;
+    position: absolute;
+    top:20px;
+    left:55px;
+  }
+  .nose {
+    width: 0; 
+    height: 0;
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 16px solid #056aa7;
+    top:70px;
+    left:95px;
+  }
+  .leye {
+    width: 10px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 12px/20px;
+    border-style: solid;
+    border-color: #4c90af;
+    border-width: 2.5px;
+    position: absolute;
+    top:43px;
+    left:79px;
+  }
+  .reye {
+    width: 10px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 12px/20px;
+    border-style: solid;
+    border-color: #4c90af;
+    border-width: 2.5px;
+    position: absolute;
+    top:43px;
+    left:109px;
+  }
+  .lpupil {
+    width: 4px;
+    height: 16px;
+    background: #4c90af;
+    border-radius: 4px/12px;
+    border-style: solid;
+    border-color: #4c90af;
+    border-width: 2px;
+    position: absolute;
+    top:46px;
+    left:81px;
+  }
+  .rpupil {
+    width: 4px;
+    height: 16px;
+    background: #4c90af;
+    border-radius: 4px/12px;
+    border-style: solid;
+    border-color: #4c90af;
+    border-width: 2px;
+    position: absolute;
+    top:46px;
+    left:110px;
+  }
+  .lhair {
+    width: 0; 
+    height: 0;
+    border-bottom: 20px solid #4c90af;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top:8px;
+    left:87px;
+  }
+  .mhair {
+    width: 0; 
+    height: 0;
+    border-bottom: 20px solid #4c90af;
+    border-left: 13px solid transparent;
+    position: absolute;
+    top:5px;
+    left:95px;
+  }
+  .rhair {
+    width: 0; 
+    height: 0;
+    border-bottom: 20px solid #4c90af;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top:8px;
+    left:106px;
+  }
