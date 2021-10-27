@@ -20,7 +20,7 @@ a:hover{
 }
 
 header{
-    height: 110vh;
+    height: 100vh;
     font-size: 10vw;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@ header{
 }
 
 .about-me{
-    height: 110vh;
+    height: 100vh;
     margin: 0;
     padding: 0 9%;
     display: flex;
@@ -39,7 +39,7 @@ header{
 }
 
 .contacts{
-    height: 110vh;
+    height: 100vh;
     margin: 0;
     padding: 0 9%;
     display: flex;
@@ -50,7 +50,7 @@ header{
 }
 
 .nav{
-    height: 110vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
