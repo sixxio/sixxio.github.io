@@ -146,6 +146,7 @@ footer{
     position: relative;
 }
 
+/*flex task*/
 .container{
     width: 250px;
     height: 250px;
@@ -220,7 +221,7 @@ footer{
 .container:active::after{
     opacity: 0;
 }
-
+/*css pic task*/
 .bg {
     width: 200px;
     height: 200px;
@@ -231,7 +232,7 @@ footer{
     position: relative;
     left: 20%; 
     top: 20%;
-  }
+}
 .pbody {
   width: 90px;
   height: 125px;
@@ -438,4 +439,86 @@ footer{
   position: absolute;
   top:8px;
   left:106px;
+}
+
+/*menu task*/
+.main-menu-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.main-menu-container div {
+  padding: 10px;
+}
+
+.main-menu-container .side-menu {
+  background-color: #D7D7D7;
+  min-height: 300px;
+}
+
+.main-menu-container .side-menu ul li{
+  background-color: #D7D7D7;
+  list-style-type: none; 
+}
+
+.main-menu-container .side-menu ul li{
+  background-color: #A6A6A6;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: .2s ease;
+}
+
+.main-menu-container .side-menu ul li:hover {
+  opacity: 0.6;
+}
+
+.main-menu-container .menu-input {
+  background-color: #A6A6A6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-menu-container .menu-input input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  background-color: #D7D7D7;
+  outline: none;
+  text-indent: 10px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.main-menu-container .menu-input button {
+  border: none;
+  background-color: #D7D7D7;
+  height: 35px;
+  padding: 0 35px;
+  transition: .2s ease;
+}
+
+.main-menu-container .menu-input button:hover {
+  opacity: 0.6;
+}
+
+.main-menu-container .menu-input input:focus-visible {
+  border: none;
+}
+
+.top-menu {
+  text-align: center;
+  background-color: #808080;
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.top-menu ul{
+  padding: 0;
+  margin: 0;
+}
+
+.top-menu ul li {
+  display: inline-block;
+  margin-right: 5px;
 }
