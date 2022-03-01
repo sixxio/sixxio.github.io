@@ -113,11 +113,20 @@ function endGame(e) {
             answerNum = i;
     }
 
-    if (answerNum == curRightCard) 
+    if (answerNum == curRightCard) {
         curScore += curHardness;
-    else 
+        document.querySelector('.sample').style.border = '10px solid rgba(30, 255, 30, 1)';
+        setTimeout(() => {
+            document.querySelector('.sample').style.border = 'transparent';
+        }, 800);
+    }
+    else{ 
         curScore -= curHardness;
-    
+        document.querySelector('.sample').style.border = '10px solid rgba(255, 30, 30, 1)';
+        setTimeout(() => {
+            document.querySelector('.sample').style.border = 'transparent';
+        }, 800);
+    }
     upScoreContainer.innerText = curScore;
 
     if (localStorage.getItem(curUser) < curScore){
