@@ -1,0 +1,244 @@
+/*  theme */
+
+.bodytheme {
+  filter: invert(1) hue-rotate(199deg) brightness(1.08);
+  background-color: #000;
+}
+
+/* Main styles */
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+}
+
+button{
+  border: none;
+  font-size: 16px;
+  padding: 0 15px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s ease;
+  text-align: center;
+}
+
+button:hover{
+  background-color: #d8d8d8;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container{
+  width: 800px;
+  border-radius: 25px;
+  margin: auto;
+  background: #b0b0b0;
+  padding: 50px;
+  text-align: center;
+}
+
+.inner-container h1{
+  margin-top: 0;
+}
+
+/* Main styles end */
+
+.up{
+  height: 80px;
+  background: #b0b0b0;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.up .timer-and-score{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer{
+  width: 150px;
+  height: 60px;
+  background: #888888;
+  position: relative;
+  border-radius: 7.5px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.palette{
+  width: 50px;
+  height: 50px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.menu{
+  width: 50px;
+  height: 50px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
+
+.sample{
+  height: 480px;
+  width: 480px;
+  position: relative;
+  border-radius: 10px;
+  margin: auto;
+  background: #b0b0b0;
+}
+
+.samplepic{
+  top: 15px;
+  height: 450px;
+  width: 450px;
+  position: relative;
+  border-radius: 10px;
+  margin: auto;
+  background: #ffffff;
+  background-size: 450px;
+}
+
+.answers{
+  width: 100%;
+  height: 180px;
+  position: relative;
+  border-radius: 10px;
+  margin:  0 auto;
+  background: #b0b0b0;
+  display:flex;
+  flex-direction: row;
+}
+
+.answerspics{
+  top: 0px;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  border-radius: 10px;
+  margin: auto;
+  background: #ffffff;
+  background-size: 120px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.menuinsert{
+  width:80%;
+  height: 80%;
+  margin: auto;
+  background: #b0b0b0;
+}
+
+
+.palette:hover{
+  opacity: 0.5;
+}
+.menu:hover{
+  opacity: 0.5;
+}
+.answerspics:hover{
+  opacity: 0.5;
+}
+
+/* Authorization form */
+
+.authform-container .authorizeform h1{
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.authform-container .authorizeform span{
+  display: block;
+}
+
+.authform-container .authorizeform .login-input{
+  display: block;
+  width: 400px;
+  margin: 20px auto;
+  outline: none;
+  height: 35px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.authform-container .authorizeform button{
+  width: 400px;
+}
+
+/* start game container */
+
+.start-game-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.start-game-container .choose-level-container .form_radio{
+  display: inline-block;
+}
+
+.start-game-container button{
+  width: 250px;
+  height: 40px;
+  background-color: rgb(207, 207, 207);
+}
+
+.start-game-container button:hover{
+  background-color: rgb(182, 182, 182);
+}
+
+/* end game */
+
+.end-game .end-game-container button{
+  margin-top: 20px;
+}
+
+.instruction-container{
+  padding: 0 100px;
+  text-align: center;
+}
+
+.time{
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+}
+
+.right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right .right-best-score{
+  margin-right: 20px;
+}
