@@ -225,6 +225,7 @@ button:hover{
 .instruction-container{
   padding: 0 100px;
   text-align: center;
+  height: 100%;
 }
 
 .time{
