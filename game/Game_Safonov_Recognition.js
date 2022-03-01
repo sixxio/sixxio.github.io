@@ -1,4 +1,3 @@
-
 let CurCards=[1,2,3,4,5,6,7,8,9,10,11];
 let curRightCard = 0;
 
@@ -13,13 +12,14 @@ let answersContainer = document.querySelector('.answers');
 let gameInstructContainer = document.querySelector('.instruction-container');
 
 
-if (localStorage.getItem('usernames')) {
+if (localStorage.getItem('usernames')) 
     usernames = localStorage.getItem('usernames');
-}
+
+if (localStorage.getItem('theme') == '1') 
+    document.querySelector("body").classList.add("bodytheme")
 
 if (!localStorage.getItem('curuser')) {
     let authForm = document.querySelector('.authform-container');
-
     authForm.style.display = "flex";
 } else {
     curUser = localStorage.getItem('curuser');
@@ -54,7 +54,6 @@ function reauth() {
     let authForm = document.querySelector('.authform-container');
     authForm.style.display = 'flex';
 
-
     clearInterval(CurTimer);
     changeDifficulty();
 }
@@ -72,8 +71,6 @@ function startGame() {
     sample.style.display = "block";
     answersContainer.style.display = "flex";
     gameInstructContainer.style.display = "none";
-
-
 
     if (radioButtons[0].checked)
         curHardness = 2;
@@ -217,8 +214,4 @@ function ChangeTheme() {
         document.querySelector("body").classList.add("bodytheme");
         localStorage.setItem('theme', '1')
     }
-}
-
-if (localStorage.getItem('theme') == '1') {
-    document.querySelector("body").classList.add("bodytheme")
 }
