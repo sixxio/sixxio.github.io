@@ -35,10 +35,13 @@ function auth() {
         curUser = inputUserName.value;
         localStorage.setItem('curuser', inputUserName.value);
     } else {
-        localStorage.setItem('usernames', usernames + "&" + inputUserName.value);
         localStorage.setItem('curuser', inputUserName.value);
         curUser = inputUserName.value;
-        localStorage.setItem(inputUserName.value, "0");
+        if (!localStorage.getItem(inputUserName.value)){
+            localStorage.setItem(inputUserName.value, "0");
+            localStorage.setItem('usernames', localStorage.getItem('usernames') + "&" + inputUserName.value);
+
+        }
         authForm.style.display = 'none';
     }
     
