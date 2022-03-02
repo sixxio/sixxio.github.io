@@ -1,4 +1,5 @@
 let CurCards=[1,2,3,4,5,6,7,8,9,10,11];
+let CurRubbish=[12,13,14,15,16,17,18,19,20,21,22,23];
 let curRightCard = 0;
 
 let curUser = "";
@@ -14,6 +15,8 @@ let gameInstructContainer = document.querySelector('.instruction-container');
 
 if (localStorage.getItem('usernames')) 
     usernames = localStorage.getItem('usernames');
+else
+    localStorage.setItem('usernames', usernames);
 
 if (localStorage.getItem('theme') == '1') 
     document.querySelector("body").classList.add("bodytheme")
@@ -25,6 +28,14 @@ if (!localStorage.getItem('curuser')) {
     curUser = localStorage.getItem('curuser');
     document.querySelector('.top-game-container .up .right .right-best-score span').innerText = localStorage.getItem(curUser);
 }
+if (localStorage.getItem('usernames').split('&').length!=0)
+{
+    let leads="";
+    for(i=1; i<localStorage.getItem('usernames').split('&').length; i++)
+            leads+=localStorage.getItem('usernames').split('&')[i]+": "+localStorage.getItem(localStorage.getItem('usernames').split('&')[i])+'\n';
+    document.querySelector('.instruction-container p').innerText=leads;
+}
+
 
 function auth() {
     let authForm = document.querySelector('.authform-container');
@@ -46,7 +57,6 @@ function auth() {
     }
     
     curUser = inputUserName.value;
-
     document.querySelector('.top-game-container .up .right .right-best-score span').innerText = localStorage.getItem(curUser);
 }
 
@@ -82,16 +92,35 @@ function startGame() {
     shuffle(CurCards);
 
     curRightCard = randomInteger(0, curHardness - 1);
+    console.log(curRightCard);
     
     answersContainer.innerHTML = "";
 
     for (let i = 0; i < curHardness; i++) {
-        answersContainer.innerHTML +=  `<div class="answerspics" style="background-image: url(${CurCards[i]}.png); transform: rotate(${randomInteger(0, 360)}deg); filter: blur(${randomInteger(3, 12)}px) invert(${randomInteger(0, 2)/10});"></div>`
+        let temp=randomInteger(0, 360);
+        let tempCard=``;
+        if(curHardness==8){
+            tempCard += `<div class="answerspics" style="transform: rotate(${temp}deg); filter: blur(2px) invert(${randomInteger(0, 1)});">`;
+            tempCard += `<div class="ans" style="background-image: url(${CurCards[i]}.png);"></div>`;
+            tempCard += `<div class="rub" style="background-image: url(${randomInteger(12,23)}.png); transform: rotate(${randomInteger(0,3)*90}deg; filter: invert(${randomInteger(0, 1)}));"></div>`;
+        }// поворот, блюр, больше шаблонов, двойная инверсия
+        else if(curHardness==4){
+            tempCard += `<div class="answerspics" style="transform: rotate(${temp}deg); filter: blur(2px);">`;
+            tempCard += `<div class="ans" style="background-image: url(${CurCards[i]}.png);"></div>`;
+            tempCard += `<div class="rub" style="background-image: url(${randomInteger(20,24)}.png); transform: rotate(${randomInteger(0,3)*90}deg);"></div>`;
+        }//поворот, блюр, шаблон
+        else{
+            tempCard += `<div class="answerspics" style="transform: rotate(${temp}deg); filter: blur(${randomInteger(4, 12)}px) invert(${randomInteger(0, 1)});">`;
+            tempCard += `<div class="ans" style="background-image: url(${CurCards[i]}.png);"></div>`;
+            tempCard += `<div class="rub" style="background-image: url(24.png);"></div>`;
+        }//поворот, ранд блюр, инверсия
+        tempCard += `</div>`//close cont
+        answersContainer.innerHTML += tempCard;
     }
 
     sampleImage.style.backgroundImage = `url(${CurCards[curRightCard]}.png)`;
 
-    document.querySelectorAll('.answers .answerspics').forEach(element => {
+    document.querySelectorAll('.answers .answerspics .rub').forEach(element => {
         element.addEventListener("click", endGame);
     });
 
@@ -102,13 +131,15 @@ function startGame() {
 function endGame(e) {
     
     let upScoreContainer = document.querySelector('.up .timer-and-score .up-cur-score-container span');
-    let answers = document.querySelectorAll('.answers .answerspics');
+    let answers = document.querySelectorAll('.answers .answerspics .rub');
     let answerNum = 0;
-
+    console.log(answers);
+    console.log(e.target);
     for (let i = 0; i < curHardness; i++) {
         if (answers[i] == e.target)
             answerNum = i;
     }
+    console.log(answerNum+'-'+curRightCard);
 
     if (answerNum == curRightCard) {
         curScore += curHardness;
@@ -131,15 +162,14 @@ function endGame(e) {
         document.querySelector('.top-game-container .up .right .right-best-score span').innerText = localStorage.getItem(curUser);
     }
 
-    if( curScore < 0){
-        clearInterval(CurTimer);
+    clearInterval(CurTimer);
+
+    if( curScore < 0)
         endFailure();
-    }
-    else{
-        clearInterval(CurTimer);
+    else
         startGame()
-    }
-        
+    
+    
 }
 
 function endFailure() {
@@ -151,6 +181,8 @@ function endFailure() {
 
     if(curScore<0)
         curScore=0;
+    if (localStorage.getItem(curUser) < curScore)
+        localStorage.setItem(curUser, curScore);
 
     endGameContainer.querySelector('.end-game-cur-score span').innerText = curScore;
     endGameContainer.querySelector('.end-game-best-score span').innerHTML = localStorage.getItem(curUser);
@@ -165,7 +197,7 @@ function changeDifficulty() {
     let startGameContainer = document.querySelector('.start-game-container');
     let endGameContainer = document.querySelector('.end-game');
     let TimerCont = document.querySelector('.up .timer .time');
-    
+
     sample.style.display = "none";
     answersContainer.style.display = "none";
 
@@ -174,6 +206,11 @@ function changeDifficulty() {
     startGameContainer.style.display = "flex";
     endGameContainer.style.display = "none";
     gameInstructContainer.style.display = "block";
+
+    let leads="";
+    for(i=1; i<localStorage.getItem('usernames').split('&').length; i++)
+            leads+=localStorage.getItem('usernames').split('&')[i]+": "+localStorage.getItem(localStorage.getItem('usernames').split('&')[i])+'\n';
+    document.querySelector('.instruction-container p').innerText=leads;
 }
 
 

@@ -144,10 +144,31 @@ button:hover{
   position: relative;
   border-radius: 10px;
   margin: auto;
-  background: #ffffff;
   background-size: 120px;
   cursor: pointer;
   transition: .3s ease;
+}
+
+.answerspics:hover{
+  transform: rotate(960deg) !important;
+}
+
+.ans{
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  border-radius: 10px;
+  margin: auto;
+  background-size: 120px;
+}
+
+.rub{
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  border-radius: 10px;
+  margin: auto;
+  background-size: 120px;
 }
 
 .menuinsert{
