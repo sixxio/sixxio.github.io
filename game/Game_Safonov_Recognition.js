@@ -84,8 +84,6 @@ function startGame() {
     sample.style.display = "block";
     answersContainer.style.display = "flex";
     gameInstructContainer.style.display = "none";
-    
-    curScore=0;
 
     if (radioButtons[0].checked)
         curHardness = 2;
