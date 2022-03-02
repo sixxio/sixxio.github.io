@@ -59,6 +59,7 @@ function auth() {
     curUser = inputUserName.value;
     document.querySelector('.top-game-container .up .right .right-best-score span').innerText = localStorage.getItem(curUser);
     curScore=0;
+    document.querySelector('.up .timer-and-score .up-cur-score-container span').innerText = curScore;
 }
 
 function reauth() {
