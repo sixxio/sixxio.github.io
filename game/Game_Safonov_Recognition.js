@@ -58,6 +58,7 @@ function auth() {
     
     curUser = inputUserName.value;
     document.querySelector('.top-game-container .up .right .right-best-score span').innerText = localStorage.getItem(curUser);
+    curScore=0;
 }
 
 function reauth() {
@@ -187,7 +188,6 @@ function endFailure() {
     endGameContainer.querySelector('.end-game-best-score span').innerHTML = localStorage.getItem(curUser);
     upScoreContainer.innerText = localStorage.getItem(curUser);
 
-    curScore = 0;
     upScoreContainer.innerText = curScore;
     clearInterval(CurTimer);
     curScore=0;
@@ -211,7 +211,7 @@ function changeDifficulty() {
     for(i=1; i<localStorage.getItem('usernames').split('&').length; i++)
             leads+=localStorage.getItem('usernames').split('&')[i]+": "+localStorage.getItem(localStorage.getItem('usernames').split('&')[i])+'\n';
     document.querySelector('.instruction-container p').innerText=leads;
-    
+
     curScore=0;
 }
 
