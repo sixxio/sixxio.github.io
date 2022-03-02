@@ -92,7 +92,6 @@ function startGame() {
     shuffle(CurCards);
 
     curRightCard = randomInteger(0, curHardness - 1);
-    console.log(curRightCard);
     
     answersContainer.innerHTML = "";
 
@@ -133,13 +132,10 @@ function endGame(e) {
     let upScoreContainer = document.querySelector('.up .timer-and-score .up-cur-score-container span');
     let answers = document.querySelectorAll('.answers .answerspics .rub');
     let answerNum = 0;
-    console.log(answers);
-    console.log(e.target);
     for (let i = 0; i < curHardness; i++) {
         if (answers[i] == e.target)
             answerNum = i;
     }
-    console.log(answerNum+'-'+curRightCard);
 
     if (answerNum == curRightCard) {
         curScore += curHardness;
