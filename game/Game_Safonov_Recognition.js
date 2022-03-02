@@ -126,8 +126,11 @@ function startGame() {
         element.addEventListener("click", endGame);
     });
 
-    ChangeTimer(curHardness * 3);
-    
+    if(curHardness==8)
+        animate(curHardness*3000, 25);
+    else if(curHardness==4)
+        animate(curHardness*3000, 10)
+    ChangeTimer(curHardness*3);
 }
 
 function endGame(e) {
@@ -253,3 +256,24 @@ function ChangeTheme() {
         localStorage.setItem('theme', '1')
     }
 }
+
+function animate(duration, module) {
+    let start = performance.now();
+  
+    requestAnimationFrame(function animate(time) {
+        let timeFraction = (time - start) / duration;
+        if (timeFraction > 1) timeFraction = 1;
+
+    
+        let conts=document.querySelectorAll('.answers .answerspics');
+        for (i=0; i<curHardness; i++){
+                conts[i].style.left = randomInteger(0,module*2)-module + 'px';
+                conts[i].style.top = randomInteger(0,module)-module/2 + 'px';
+            }; 
+    
+        if (timeFraction < 1) {
+            requestAnimationFrame(animate);
+        }
+  
+    });
+  }

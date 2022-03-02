@@ -147,6 +147,7 @@ button:hover{
   background-size: 120px;
   cursor: pointer;
   transition: .3s ease;
+  left: 0; top: 0; 
 }
 
 .answerspics:hover{
